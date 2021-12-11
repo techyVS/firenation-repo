@@ -1,0 +1,48 @@
+@use 'global-resets' as *;
+
+.privacy-content {
+	width: 90%;
+	margin: auto;
+	padding: 10em 0;
+	@media screen and (min-width: 62em) {
+		width: 95%;
+	}
+
+	.heading-container {
+		margin-bottom: 3em;
+		.heading {
+			font-family: $heading;
+			text-transform: uppercase;
+			font-size: clamp(1.5rem, 5vw, $heading-size);
+		}
+	}
+
+	.privacy-container {
+		display: grid;
+		gap: 60px;
+		.section {
+			max-width: 650px;
+
+			.sub-heading {
+				font-family: $heading;
+				margin-bottom: 1em;
+				line-height: $line-height;
+			}
+
+			p {
+				font-family: $body-font;
+				line-height: $line-height;
+			}
+
+			ul {
+				margin-top: 1em;
+				li {
+					font-family: $body-font;
+					font-size: 0.9rem;
+					margin-bottom: 2em;
+					margin-left: 3em;
+				}
+			}
+		}
+	}
+}

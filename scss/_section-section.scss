@@ -1,0 +1,57 @@
+@use 'global-resets' as *;
+
+.section-section {
+	// background: red;
+	padding: 0 0 10em 0;
+	.container-text {
+		width: 90%;
+		margin: 0 auto;
+		@media screen and (min-width: 43em) {
+			width: 70%;
+		}
+		@media screen and (min-width: 62em) {
+			width: 95%;
+		}
+		margin-bottom: 3em;
+		.text {
+			font-family: $heading;
+			text-transform: uppercase;
+		}
+	}
+
+	.box-container {
+		width: 90%;
+		margin: 0 auto;
+		display: grid;
+		gap: 10px;
+		.box {
+			height: 100px;
+			width: 100%;
+			background: $grad-bg;
+			border-radius: $radius;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 4em;
+			h4 {
+				font-family: $body-font;
+				text-align: center;
+				text-transform: uppercase;
+				color: #fff;
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 70%;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 95%;
+			grid-template-columns: repeat(4, 1fr);
+			.box {
+				height: 280px;
+			}
+		}
+	}
+}

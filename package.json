@@ -1,0 +1,23 @@
+{
+  "name": "firenation_project",
+  "version": "1.0.0",
+  "description": "Official website for Fire Nation Evangelistic Ministry",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss:asstets/css"
+  },
+  "keywords": [
+    "Church",
+    "Ministry",
+    "Religion"
+  ],
+  "author": "Victor Sky / CodedlyAfrica_HQ",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.44.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4"
+  }
+}

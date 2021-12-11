@@ -1,0 +1,159 @@
+@use 'global-resets' as *;
+
+.footer {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		background: $accent-color;
+		top: 0;
+		left: 0;
+	}
+
+	.container-custom {
+		width: 90%;
+		margin: 0 auto;
+		display: grid;
+		gap: 100px;
+
+		.brand-wrapper {
+			padding-top: 2em;
+			.footer-img {
+				width: 200px;
+			}
+		}
+
+		.locate-fn {
+			.item-one {
+				h3 {
+					font-family: $heading;
+					text-transform: uppercase;
+					margin-bottom: 1.5em;
+				}
+				.address {
+					font-family: $body-font;
+					text-transform: capitalize;
+					margin-bottom: 1.5em;
+					color: $gray;
+				}
+			}
+			.item-two {
+				color: $gray;
+				p {
+					font-family: $body-font;
+					margin-bottom: 1.5em;
+					span {
+						font-weight: bolder;
+						text-transform: capitalize;
+					}
+				}
+			}
+		}
+
+		.site-maps {
+			display: grid;
+			gap: 15px;
+			.heading {
+				h3 {
+					font-family: $heading;
+					text-transform: uppercase;
+				}
+			}
+
+			.link-wrapper {
+				a {
+					text-decoration: none;
+					text-transform: capitalize;
+					font-family: $body-font;
+					color: $gray;
+					position: relative;
+					transition: transform 300ms ease-in-out;
+					&::after {
+						content: '';
+						position: absolute;
+						background: $gray;
+						height: 2px;
+						width: 30px;
+						top: 50%;
+						transform: scale(0, 1) translateX(0);
+						margin-left: 15px;
+						transition: transform 300ms ease-in-out;
+						transform-origin: left;
+					}
+					&:hover::after {
+						transform: scale(1, 1) translateX(40%);
+						background: $accent-color;
+					}
+					&:hover {
+						color: $accent-color;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 80%;
+			grid-template-columns: repeat(3, 1fr);
+			padding-top: 5em;
+		}
+	}
+
+	.ls-container {
+		margin-top: 4em;
+		text-align: center;
+		display: grid;
+		gap: 0.5em;
+		.privacy {
+			.privacy-btn {
+				text-decoration: none;
+				font-family: $body-font;
+				text-transform: capitalize;
+				color: $gray;
+				transition: all 200ms ease-in-out;
+				&::after {
+					// content: '\2014';
+					content: '';
+					position: absolute;
+					width: 20px;
+					height: 2px;
+					background: $gray;
+					bottom: 5.5%;
+					margin-left: 10px;
+					display: none;
+					transition: all 300ms ease-in-out;
+					transform: scale(1, 1) translateX(0);
+
+					@media screen and (min-width: 62em) {
+						display: inline;
+					}
+				}
+				&:hover::after {
+					transform: scale(1.5, 1) translateX(50%);
+					background: $accent-color;
+				}
+				&:hover {
+					color: $accent-color;
+				}
+			}
+		}
+
+		.copyright {
+			.copyright-btn {
+				font-family: $body-font;
+				text-transform: capitalize;
+				color: $gray;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 90%;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			margin-top: 7em;
+			padding-bottom: 1em;
+		}
+	}
+}

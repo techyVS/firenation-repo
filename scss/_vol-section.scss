@@ -1,0 +1,59 @@
+@use 'global-resets' as *;
+
+.volunteer-section {
+	.vol-text-img-con {
+		padding-bottom: 3em;
+		width: 90%;
+		margin: 0 auto;
+		display: grid;
+		gap: 30px;
+		.text-con {
+			.text {
+				font-family: $heading;
+				text-transform: uppercase;
+				line-height: $line-height;
+				&:nth-child(2) {
+					margin-left: 2em;
+				}
+				&:nth-child(3) {
+					margin-left: 1em;
+					margin-bottom: 1em;
+				}
+			}
+
+			p {
+				font-family: $body-font;
+				line-height: $line-height;
+			}
+		}
+
+		.img-con {
+			background: white;
+			width: 100%;
+			height: 200px;
+			background: url('/asstets/img/volunteer.jpg') center/cover, no-repeat;
+			position: relative;
+			border-radius: $radius;
+			&::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: $grad-bg;
+				border-radius: $radius;
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 90%;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 95%;
+			grid-template-columns: 1fr 1fr;
+			.img-con {
+				height: 300px;
+			}
+		}
+	}
+}

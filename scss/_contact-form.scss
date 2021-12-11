@@ -1,0 +1,101 @@
+@use 'global-resets' as *;
+
+.form-wrapper {
+	margin-top: 5em;
+	.form-heading-container {
+		font-family: $heading;
+		text-transform: uppercase;
+		font-size: clamp(1.5rem, 5vw, 2rem);
+		margin-bottom: 2em;
+	}
+	form {
+		display: grid;
+		gap: 50px;
+		.checkboxes {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			max-width: 700px;
+
+			.boxes {
+				display: block;
+				position: relative;
+				.inner-option {
+					border: 2px solid #3400af;
+					// height: 40px;
+					// width: 100%;
+					border-radius: 40px;
+					position: relative;
+					cursor: pointer;
+					padding: 0.5em 2em;
+					font-family: $body-font;
+				}
+				.checkbox {
+					position: absolute;
+					top: 10px;
+					right: 10px;
+					z-index: 1;
+					display: none;
+
+					&:checked ~ .inner-option {
+						background: #3400af;
+						transition: all 300ms ease-in-out;
+						color: #fff;
+					}
+				}
+			}
+		}
+
+		.form-fields-contain {
+			display: grid;
+			gap: 10px;
+			.wrapper {
+				max-width: 600px;
+				input {
+					width: 100%;
+					border: #3400af solid 2px;
+					background: transparent;
+					padding: 0.7em 1em;
+					outline: none;
+					font-family: $body-font;
+					color: $gray;
+					border-radius: $radius;
+					&:focus {
+						background: rgba(52, 0, 175, 0.055);
+					}
+				}
+
+				textarea {
+					width: 100%;
+					height: 190px;
+					outline: none;
+					font-family: $body-font;
+					color: $gray;
+					border: #3400af solid 2px;
+					background: transparent;
+					padding: 0.7em 1em;
+					border-radius: $radius;
+
+					&:focus {
+						background: rgba(52, 0, 175, 0.055);
+					}
+				}
+			}
+
+			button {
+				display: inline-block;
+				width: 200px;
+				margin-top: 2em;
+				background: linear-gradient(90deg, #f5a433 33.16%, #d96438 100%);
+				padding: 0.8em 4em;
+				border: none;
+				border-radius: $radius;
+				font-size: 1rem;
+				font-weight: bold;
+				color: #fff;
+				cursor: pointer;
+				font-family: $body-font;
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+@use 'top';
+@use 'carousel';
+@use 'header';
+@use 'intro';
+@use 'body-section';
+@use 'column-three';
+@use 'livestream';
+
+// General footer
+@use 'footer';
+// End of Homepage Styles
+
+// About us styles=================
+@use 'about-intro';
+@use 'about-section';
+@use 'our-pastors';
+// End of about us styles==========
+
+// Contact page styles
+@use 'main-area'; //this is for the contact page
+@use 'contact-form';
+
+// Privacy policy styles
+@use 'privacy';
+
+// Donate and Give styles
+@use 'donate-give-banner';
+@use 'section-section';
+@use 'vol-section';

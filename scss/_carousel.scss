@@ -1,0 +1,61 @@
+@use 'global-resets' as *;
+
+// .home {
+// 	width: 90%;
+// 	margin: 0 auto;
+// }
+#slider-wrapper {
+	margin-bottom: 30px;
+	#slider-item {
+		position: relative;
+		.text-wrap {
+			position: absolute;
+			top: 35%;
+			text-align: center;
+			width: 100%;
+			font-family: $heading;
+			z-index: 10;
+			p {
+				color: #fff;
+				font-size: clamp(1.25rem, 5vw, 2rem);
+				text-transform: uppercase;
+				padding: 0 3em;
+				line-height: 1.5;
+			}
+			.slider-btn {
+				background: $accent-color;
+				position: relative;
+				// z-index: 10000 !important;
+				display: inline-block;
+				margin-top: 3em;
+			}
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: $grad-bg;
+			// z-index: 1000;
+		}
+
+		#slider-img1 {
+			background: url('/asstets/img/evangelism.jpeg') center/cover, no-repeat;
+			height: 600px;
+		}
+		#slider-img2 {
+			background: url('/asstets/img/baptism.jpg') center/cover, no-repeat;
+			height: 600px;
+		}
+		#slider-img3 {
+			background: url('/asstets/img/bible.jpeg') center/cover, no-repeat;
+			height: 600px;
+		}
+		#slider-img4 {
+			background: url('/asstets/img/partnership.jpg') center/cover, no-repeat;
+			height: 600px;
+		}
+	}
+}
+
+@media screen and (min-width: 62em) {
+}

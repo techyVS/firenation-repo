@@ -1,0 +1,52 @@
+@use 'global-resets' as *;
+
+.banner {
+	background: url('/asstets/img/donate.jpg') center/cover, no-repeat;
+	height: 300px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: $grad-bg;
+	}
+	.banner-container {
+		width: 90%;
+		margin: auto;
+		position: relative;
+		z-index: 1;
+		.heading-one {
+			font-family: $heading;
+			line-height: 1.4;
+			text-transform: uppercase;
+			color: #fff;
+			font-size: clamp(1.5rem, 5vw, $heading-size);
+			&:nth-child(2) {
+				margin-left: 2em;
+			}
+		}
+		@media screen and (min-width: 43em) {
+			width: 95%;
+		}
+	}
+}
+
+// Text section
+.text-section {
+	padding: 5em 0;
+	font-family: $body-font;
+	line-height: $line-height;
+	.text-container {
+		width: 90%;
+		margin: 0 auto;
+
+		@media screen and (min-width: 43em) {
+			width: 95%;
+			p {
+				max-width: 600px;
+			}
+		}
+	}
+}

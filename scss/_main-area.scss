@@ -1,0 +1,73 @@
+@use 'global-resets' as *;
+
+// Contact us styles
+.main-area {
+	padding: 5em 0;
+	.container-area {
+		width: 90%;
+		margin: auto;
+		.text-headings {
+			text-transform: uppercase;
+			font-family: $heading;
+			line-height: 1.5;
+			.heading {
+				font-size: clamp(1.5rem, 5vw, 2rem);
+				span {
+					#lotfile {
+						width: 30px !important;
+						height: 50% !important;
+						display: inline-block !important;
+					}
+				}
+				&:nth-child(2) {
+					margin-left: 1.8em;
+				}
+				&:nth-child(3) {
+					margin-left: 1em;
+					margin-bottom: 2em;
+				}
+			}
+
+			.map {
+				width: 100%;
+				position: relative;
+				iframe {
+					width: 100%;
+					border-radius: $radius;
+				}
+				.address {
+					position: absolute;
+					background: linear-gradient(
+	159.17deg,
+	rgb(201, 0, 177) 13.78%,
+	rgb(70, 67, 237) 53.06%,
+	rgb(52, 0, 175) 96.71%
+);
+					margin-top: 1em;
+					bottom: 0;
+					left: 0;
+					border-radius: $radius;
+					padding: 0.5em 1em 0.5em 1em;
+					p {
+						padding: 0 1em 0.5em 0;
+						color: #fff;
+						font-size: 1.3rem;
+						font-weight: bold;
+						font-family: $body-font;
+						text-transform: capitalize;
+					}
+					.address-btn {
+						display: inline-block;
+						text-transform: capitalize;
+						text-decoration: none;
+						color: #fff;
+						margin: 1em 0 0.5em 0;
+						background: $accent-color;
+						padding: 0.5em 3em;
+						border-radius: $radius;
+					}
+				}
+			}
+		}
+	}
+}

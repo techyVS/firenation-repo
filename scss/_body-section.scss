@@ -1,0 +1,37 @@
+@use 'global-resets' as *;
+
+.body-section {
+	background: rgba(232, 232, 232, 0.63);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	position: relative;
+	margin-bottom: 6em;
+
+	.container-custom {
+		width: 90%;
+		margin: 0 auto;
+		padding: 10em 0;
+		.heading {
+			font-family: $heading;
+			text-transform: uppercase;
+			font-size: clamp(1.25rem, 5vw, 1.875rem);
+		}
+
+		.sub {
+			margin-top: 1em;
+			font-family: $body-font;
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 80%;
+
+      .heading {
+        text-align: start;
+      }
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 50%;
+		}
+	}
+}

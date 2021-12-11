@@ -1,0 +1,79 @@
+@use 'global-resets' as *;
+
+.about-intro {
+	background: url('/asstets/img/about-bg.jpg') center/cover no-repeat;
+	min-height: 700px;
+	position: relative;
+	z-index: 0;
+	display: grid;
+	place-items: center;
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: $grad-bg;
+		z-index: 0;
+	}
+
+	.about-container {
+		position: relative;
+		z-index: 1;
+		width: 90%;
+		margin: 0 auto;
+		display: grid;
+		gap: 40px;
+
+		.lofie-wrapper {
+			display: flex;
+			justify-content: center;
+			// #lotfile {
+			// height: 400px !important;
+			// }
+
+			@media screen and (min-width: 43em) {
+				#lotfile {
+					height: 400px !important;
+				}
+			}
+		}
+
+		.welcome-text {
+			display: grid;
+			place-content: center;
+			padding-bottom: 10em;
+			.text-wrapper {
+				font-family: $heading;
+				text-transform: uppercase;
+				color: #fff;
+				line-height: 1.4;
+				.heading {
+					font-size: clamp(1.5rem, 5vw, 2.5rem);
+				}
+				.heading-two {
+					margin-left: 3em;
+				}
+				.heading-three {
+					margin-left: 2em;
+				}
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			grid-template-columns: 1fr 1fr;
+			width: 65%;
+
+			.lofie-wrapper {
+				#lotfile {
+					width: 400px !important;
+					height: 400px !important;
+					// background: white;
+					border-radius: $radius;
+				}
+			}
+			.welcome-text {
+				padding-bottom: unset;
+			}
+		}
+	}
+}

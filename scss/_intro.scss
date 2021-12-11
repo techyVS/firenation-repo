@@ -1,0 +1,128 @@
+@use 'global-resets' as *;
+
+.intro {
+	margin-bottom: 5em;
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		display: grid;
+		gap: 10px;
+		.img-wrapper {
+			background: url('/asstets/img/African\ crusade.jpg') center/cover,
+				no-repeat;
+			height: 300px;
+			position: relative;
+			border-radius: $radius;
+			&::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: $grad-bg;
+				border-radius: $radius;
+			}
+		}
+
+		.intro-text {
+			.heading-wrapper {
+				margin-top: 2em;
+				display: grid;
+				// align-items: center;
+				gap: 15px;
+				#lotfile {
+					width: 50px !important;
+					height: 50px !important;
+					border: 2px solid $accent-color;
+					border-radius: 10px;
+					position: relative;
+					&::before {
+						content: '';
+						position: absolute;
+						top: -10%;
+						bottom: 100%;
+						left: -13%;
+						right: 3%;
+						height: 52px;
+						border: 2px solid rgb(70, 67, 237);
+						border-radius: 10px;
+						margin-bottom: 6px;
+					}
+				}
+
+				.text-area {
+					.heading {
+						font-family: $heading;
+						text-transform: uppercase;
+						margin-bottom: 0.2em;
+						font-size: clamp(1.5em, 4vw, $heading-size);
+					}
+					.sub-heading {
+						font-family: $body-font;
+						line-height: $line-height;
+						font-size: $body-size;
+					}
+					.btn {
+						font-family: $body-font;
+						text-transform: uppercase;
+						font-weight: bold;
+						display: block;
+						background: $accent-color;
+						padding: 0.8em;
+						text-align: center;
+						width: 100%;
+						border-radius: 30px;
+						margin-top: 1.5em;
+						color: #fff;
+						text-decoration: none;
+						position: relative;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			grid-template-columns: 1fr;
+
+			.img-wrapper {
+				height: 450px;
+			}
+
+			.intro-text {
+				.heading-wrapper {
+					.text-area {
+						.sub-heading {
+							max-width: 600px;
+						}
+						.btn {
+							display: inline-block;
+							width: unset;
+							padding: 0.8em 5em;
+						}
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			margin-top: 10em;
+			width: 95%;
+			grid-template-columns: 1.5fr 1.5fr;
+			gap: 60px;
+
+			.intro-text {
+				.heading-wrapper {
+					margin-top: unset;
+
+					.text-area {
+						.sub-heading {
+							max-width: 500px;
+						}
+						.btn {
+							display: inline-block;
+							width: unset;
+						}
+					}
+				}
+			}
+		}
+	}
+}
