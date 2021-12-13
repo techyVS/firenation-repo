@@ -4,6 +4,9 @@
 // Poppins font
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+// Open sans
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,500&display=swap');
+
 // Sass Variables
 $grad-bg: linear-gradient(
 	159.17deg,
@@ -12,9 +15,10 @@ $grad-bg: linear-gradient(
 	rgba(52, 0, 175, 0.45) 96.71%
 );
 $accent-color: #ff9500;
-$gray: #6f6f6f;
+$main-color: #18181c;
+$gray: #5a5a5a;
 $heading: 'Montserrat', sans-serif;
-$body-font: 'Poppins', sans-serif;
+$body-font: 'Open Sans', sans-serif;
 $line-height: 27px;
 $body-size: 1.25rem;
 $heading-size: 2.4rem;
@@ -32,4 +36,12 @@ html {
 	margin: 0;
 	padding: 0;
 	box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	letter-spacing: 2px;
+}
+
+a {
+	text-transform: uppercase;
 }

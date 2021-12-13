@@ -13,6 +13,7 @@
 				font-family: $heading;
 				text-transform: uppercase;
 				font-size: clamp(1.5em, 4vw, $heading-size);
+				color: $gray;
 				span {
 					color: red;
 

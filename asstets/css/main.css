@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,500&display=swap");
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -11,6 +12,14 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 2px;
+}
+
+a {
+  text-transform: uppercase;
 }
 
 .top {
@@ -30,8 +39,8 @@ html {
 }
 .top .ms-link {
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
-  color: #6f6f6f;
+  font-family: "Open Sans", sans-serif;
+  color: #5a5a5a;
   display: inline-block;
   transition: all 200ms ease-in-out;
   font-weight: bold;
@@ -41,7 +50,7 @@ html {
   position: absolute;
   width: 20px;
   height: 2px;
-  background: #6f6f6f;
+  background: #5a5a5a;
   top: 50%;
   margin-left: 10px;
   transition: all 300ms ease-in-out;
@@ -148,7 +157,7 @@ html {
 }
 .header .navbar-container .navbar .navlinks-con .li-wrapper .list-items .btn {
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #fff;
   opacity: 0;
 }
@@ -161,12 +170,13 @@ html {
 }
 .header .navbar-container .navbar .navlinks-con .contact-wrapper li .contact-btn {
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: inline-block;
   background: #ff9500;
   padding: 0.5em 3em;
   border-radius: 20px;
-  color: #fff;
+  color: #ffffff;
+  font-weight: 700;
 }
 @media screen and (min-width: 43em) {
   .header .navbar-container .navbar .navlinks-con {
@@ -178,6 +188,22 @@ html {
   }
   .header .navbar-container .navbar .navlinks-con .li-wrapper .list-items .btn {
     font-size: 1.1rem;
+    position: relative;
+  }
+  .header .navbar-container .navbar .navlinks-con .li-wrapper .list-items .btn::before {
+    content: "";
+    position: absolute;
+    top: 105%;
+    left: -1px;
+    height: 3px;
+    width: 100%;
+    background: #ff9500;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform 300ms ease-in-out;
+  }
+  .header .navbar-container .navbar .navlinks-con .li-wrapper .list-items .btn:hover::before {
+    transform: scale(1, 1);
   }
 }
 .header .navbar-container .nav-toggle:checked ~ .navbar .navlinks-con .li-wrapper .list-items .btn {
@@ -267,6 +293,9 @@ html {
     color: #000;
     opacity: 1;
   }
+  #header .navbar-container .navbar .navlinks-con .li-wrapper .list-items .btn-accent {
+    color: #ff9500;
+  }
   #header .navbar-container .navbar .navlinks-con .contact-wrapper {
     margin-top: -10px;
   }
@@ -331,12 +360,12 @@ html {
   font-size: clamp(1.5em, 4vw, 2.4rem);
 }
 .intro .container .intro-text .heading-wrapper .text-area .sub-heading {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 27px;
   font-size: 1.25rem;
 }
 .intro .container .intro-text .heading-wrapper .text-area .btn {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   display: block;
@@ -404,7 +433,7 @@ html {
 }
 .body-section .container-custom .sub {
   margin-top: 1em;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 @media screen and (min-width: 43em) {
   .body-section .container-custom {
@@ -463,13 +492,13 @@ html {
   display: inline-block;
   margin: 1em 0;
   border-radius: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
 }
 .column-three .container-custom .visit-fn .wrapper .meeting {
   color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: bold;
 }
 .column-three .container-custom .wrap {
@@ -506,7 +535,7 @@ html {
   display: inline-block;
   margin: 1em 0;
   border-radius: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -543,6 +572,7 @@ html {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-size: clamp(1.5em, 4vw, 2.4rem);
+  color: #5a5a5a;
 }
 .livestream-section .lv-text-container .heading .heading-text span {
   color: red;
@@ -578,7 +608,7 @@ html {
   background: #000;
   z-index: 100;
   transform: translate(-50%);
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   opacity: 0.3;
 }
 .livestream-section .lv-st-container .livestream-frame {
@@ -616,27 +646,44 @@ html {
 .footer .container-custom .brand-wrapper .footer-img {
   width: 200px;
 }
+@media screen and (min-width: 62em) {
+  .footer .container-custom .brand-wrapper {
+    padding-top: unset;
+  }
+  .footer .container-custom .brand-wrapper .footer-img {
+    width: 100px;
+  }
+}
 .footer .container-custom .locate-fn .item-one h3 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   margin-bottom: 1.5em;
+  color: #5a5a5a;
 }
 .footer .container-custom .locate-fn .item-one .address {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: capitalize;
   margin-bottom: 1.5em;
-  color: #6f6f6f;
+  color: #18181c;
 }
 .footer .container-custom .locate-fn .item-two {
-  color: #6f6f6f;
+  color: #18181c;
 }
 .footer .container-custom .locate-fn .item-two p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin-bottom: 1.5em;
 }
 .footer .container-custom .locate-fn .item-two p span {
   font-weight: bolder;
   text-transform: capitalize;
+}
+.footer .container-custom .locate-fn .icon-container {
+  margin-top: 2.5em;
+}
+.footer .container-custom .locate-fn .icon-container a {
+  color: #18181c;
+  font-size: 25px;
+  margin-right: 30px;
 }
 .footer .container-custom .site-maps {
   display: grid;
@@ -645,19 +692,20 @@ html {
 .footer .container-custom .site-maps .heading h3 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
+  color: #5a5a5a;
 }
 .footer .container-custom .site-maps .link-wrapper a {
   text-decoration: none;
   text-transform: capitalize;
-  font-family: "Poppins", sans-serif;
-  color: #6f6f6f;
+  font-family: "Open Sans", sans-serif;
+  color: #18181c;
   position: relative;
   transition: transform 300ms ease-in-out;
 }
 .footer .container-custom .site-maps .link-wrapper a::after {
   content: "";
   position: absolute;
-  background: #6f6f6f;
+  background: #5a5a5a;
   height: 2px;
   width: 30px;
   top: 50%;
@@ -688,9 +736,9 @@ html {
 }
 .footer .ls-container .privacy .privacy-btn {
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: capitalize;
-  color: #6f6f6f;
+  color: #18181c;
   transition: all 200ms ease-in-out;
 }
 .footer .ls-container .privacy .privacy-btn::after {
@@ -698,8 +746,8 @@ html {
   position: absolute;
   width: 20px;
   height: 2px;
-  background: #6f6f6f;
-  bottom: 5.5%;
+  background: #18181c;
+  bottom: 5%;
   margin-left: 10px;
   display: none;
   transition: all 300ms ease-in-out;
@@ -718,9 +766,9 @@ html {
   color: #ff9500;
 }
 .footer .ls-container .copyright .copyright-btn {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: capitalize;
-  color: #6f6f6f;
+  color: #18181c;
 }
 @media screen and (min-width: 62em) {
   .footer .ls-container {
@@ -818,7 +866,7 @@ html {
   margin-bottom: 1.5em;
 }
 .about-section .container-custom .about-sub {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 27px;
   max-width: 600px;
 }
@@ -844,7 +892,7 @@ html {
 .pastors-section .container .images-wrap .img-wrap {
   height: 350px;
   position: relative;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -944,7 +992,7 @@ html {
   color: #fff;
   font-size: 1.3rem;
   font-weight: bold;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: capitalize;
 }
 .main-area .container-area .text-headings .map .address .address-btn {
@@ -987,7 +1035,7 @@ html {
   position: relative;
   cursor: pointer;
   padding: 0.5em 2em;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .form-wrapper form .checkboxes .boxes .checkbox {
   position: absolute;
@@ -1014,8 +1062,8 @@ html {
   background: transparent;
   padding: 0.7em 1em;
   outline: none;
-  font-family: "Poppins", sans-serif;
-  color: #6f6f6f;
+  font-family: "Open Sans", sans-serif;
+  color: #5a5a5a;
   border-radius: 20px;
 }
 .form-wrapper form .form-fields-contain .wrapper input:focus {
@@ -1025,8 +1073,8 @@ html {
   width: 100%;
   height: 190px;
   outline: none;
-  font-family: "Poppins", sans-serif;
-  color: #6f6f6f;
+  font-family: "Open Sans", sans-serif;
+  color: #5a5a5a;
   border: #3400af solid 2px;
   background: transparent;
   padding: 0.7em 1em;
@@ -1047,7 +1095,7 @@ html {
   font-weight: bold;
   color: #fff;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .privacy-content {
@@ -1081,14 +1129,14 @@ html {
   line-height: 27px;
 }
 .privacy-content .privacy-container .section p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 27px;
 }
 .privacy-content .privacy-container .section ul {
   margin-top: 1em;
 }
 .privacy-content .privacy-container .section ul li {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
   margin-bottom: 2em;
   margin-left: 3em;
@@ -1131,7 +1179,7 @@ html {
 
 .text-section {
   padding: 5em 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 27px;
 }
 .text-section .text-container {
@@ -1186,7 +1234,7 @@ html {
   padding: 4em;
 }
 .section-section .box-container .box h4 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
@@ -1227,7 +1275,7 @@ html {
   margin-bottom: 1em;
 }
 .volunteer-section .vol-text-img-con .text-con p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 27px;
 }
 .volunteer-section .vol-text-img-con .img-con {

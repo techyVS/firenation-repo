@@ -45,6 +45,7 @@
 							font-family: $body-font;
 							color: #fff;
 							opacity: 0;
+
 							&:focus {
 								outline: none !important;
 								box-shadow: none !important;
@@ -58,12 +59,13 @@
 						list-style: none;
 						.contact-btn {
 							text-decoration: none;
-							font-family: $body-font;
+							font-family: $heading;
 							display: inline-block;
 							background: $accent-color;
 							padding: 0.5em 3em;
 							border-radius: $radius;
-							color: #fff;
+							color: #ffffff;
+							font-weight: 700;
 						}
 					}
 				}
@@ -74,11 +76,28 @@
 					text-align: center;
 					margin-top: 3em;
 					.li-wrapper {
-						
 						.list-items {
 							margin-bottom: 2em !important;
+
 							.btn {
 								font-size: 1.1rem;
+								position: relative;
+
+								&::before {
+									content: '';
+									position: absolute;
+									top: 105%;
+									left: -1px;
+									height: 3px;
+									width: 100%;
+									background: $accent-color;
+									transform: scale(0, 1);
+									transform-origin: left;
+									transition: transform 300ms ease-in-out;
+								}
+								&:hover::before {
+									transform: scale(1, 1);
+								}
 							}
 						}
 					}
@@ -89,7 +108,6 @@
 		.nav-toggle:checked ~ .navbar .navlinks-con .li-wrapper .list-items .btn {
 			opacity: 1;
 			transition: opacity 300ms ease-in-out;
-			
 		}
 
 		.nav-toggle:checked ~ .navbar {
@@ -157,8 +175,7 @@
 				width: 500%;
 				margin: unset;
 				padding: unset;
-				// display: block;
-				transform: translate(.5%);
+				transform: translate(0.5%);
 				opacity: 1;
 				.navlinks-con {
 					display: flex;
@@ -181,6 +198,9 @@
 								font-size: unset;
 								color: #000;
 								opacity: 1;
+							}
+							.btn-accent {
+								color: $accent-color;
 							}
 						}
 					}
