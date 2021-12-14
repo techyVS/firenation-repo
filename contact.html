@@ -115,7 +115,7 @@
 					<div class="form-heading-container">
 						<h3 class="heading">Contact us</h3>
 					</div>
-					<form action="/search">
+					<form name="contact-form" netlify>
 						<div class="checkboxes">
 							<label class="boxes prayer-wrap" for="prayer">
 								<input
@@ -210,8 +210,8 @@
 								<input
 									type="email"
 									name="full-name"
-									id="full-name"
-									class="full-name"
+									id="email"
+									class="email"
 									placeholder="Email"
 								/>
 							</div>
@@ -221,9 +221,9 @@
 							<div class="wrapper">
 								<input
 									type="text"
-									name="full-name"
-									id="full-name"
-									class="full-name"
+									name="address"
+									id="address"
+									class="address"
 									placeholder="Address"
 								/>
 							</div>
@@ -234,6 +234,7 @@
 									name="message"
 									placeholder="Message"
 									id="message"
+									name="message"
 								></textarea>
 							</div>
 
@@ -297,7 +298,9 @@
 						<a href="/donate-volunteer.html">give</a>
 					</div>
 					<div class="link-wrapper">
-						<a href="https://youtube.com/channel/UCWUVvtw1VpOKMQsqK5rzOGw" target="_blank"
+						<a
+							href="https://youtube.com/channel/UCWUVvtw1VpOKMQsqK5rzOGw"
+							target="_blank"
 							>tv/messages</a
 						>
 					</div>

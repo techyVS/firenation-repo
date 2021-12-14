@@ -31,21 +31,21 @@
 				#lotfile {
 					width: 50px !important;
 					height: 50px !important;
-					border: 2px solid $accent-color;
+					// border: 2px solid $accent-color;
 					border-radius: 10px;
 					position: relative;
-					&::before {
-						content: '';
-						position: absolute;
-						top: -10%;
-						bottom: 100%;
-						left: -13%;
-						right: 3%;
-						height: 52px;
-						border: 2px solid rgb(70, 67, 237);
-						border-radius: 10px;
-						margin-bottom: 6px;
-					}
+					// &::before {
+					// 	content: '';
+					// 	position: absolute;
+					// 	top: -10%;
+					// 	bottom: 100%;
+					// 	left: -13%;
+					// 	right: 3%;
+					// 	height: 52px;
+					// 	border: 2px solid rgb(70, 67, 237);
+					// 	border-radius: 10px;
+					// 	margin-bottom: 6px;
+					// }
 				}
 
 				.text-area {
@@ -54,11 +54,13 @@
 						text-transform: uppercase;
 						margin-bottom: 0.2em;
 						font-size: clamp(1.5em, 4vw, $heading-size);
+						color: $gray;
 					}
 					.sub-heading {
 						font-family: $body-font;
 						line-height: $line-height;
 						font-size: $body-size;
+						color: $main-color;
 					}
 					.btn {
 						font-family: $body-font;

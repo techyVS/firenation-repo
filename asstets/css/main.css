@@ -337,32 +337,21 @@ a {
 .intro .container .intro-text .heading-wrapper #lotfile {
   width: 50px !important;
   height: 50px !important;
-  border: 2px solid #ff9500;
   border-radius: 10px;
   position: relative;
-}
-.intro .container .intro-text .heading-wrapper #lotfile::before {
-  content: "";
-  position: absolute;
-  top: -10%;
-  bottom: 100%;
-  left: -13%;
-  right: 3%;
-  height: 52px;
-  border: 2px solid #4643ed;
-  border-radius: 10px;
-  margin-bottom: 6px;
 }
 .intro .container .intro-text .heading-wrapper .text-area .heading {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   margin-bottom: 0.2em;
-  font-size: clamp(1.5em, 4vw, 2.4rem);
+  font-size: clamp(1.5em, 4vw, 2.5rem);
+  color: #5a5a5a;
 }
 .intro .container .intro-text .heading-wrapper .text-area .sub-heading {
   font-family: "Open Sans", sans-serif;
   line-height: 27px;
-  font-size: 1.25rem;
+  font-size: 1.12rem;
+  color: #18181c;
 }
 .intro .container .intro-text .heading-wrapper .text-area .btn {
   font-family: "Open Sans", sans-serif;
@@ -475,7 +464,7 @@ a {
 .column-three .container-custom .visit-fn .wrapper {
   position: absolute;
   z-index: 1;
-  left: 10%;
+  left: 5%;
   bottom: 10%;
 }
 .column-three .container-custom .visit-fn .wrapper h3 {
@@ -571,7 +560,7 @@ a {
 .livestream-section .lv-text-container .heading .heading-text {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  font-size: clamp(1.5em, 4vw, 2.4rem);
+  font-size: clamp(1.5em, 4vw, 2.5rem);
   color: #5a5a5a;
 }
 .livestream-section .lv-text-container .heading .heading-text span {
@@ -1114,7 +1103,7 @@ a {
 .privacy-content .heading-container .heading {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  font-size: clamp(1.5rem, 5vw, 2.4rem);
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
 .privacy-content .privacy-container {
   display: grid;
@@ -1166,7 +1155,7 @@ a {
   line-height: 1.4;
   text-transform: uppercase;
   color: #fff;
-  font-size: clamp(1.5rem, 5vw, 2.4rem);
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
 .banner .banner-container .heading-one:nth-child(2) {
   margin-left: 2em;
@@ -1224,20 +1213,32 @@ a {
   gap: 10px;
 }
 .section-section .box-container .box {
-  height: 100px;
+  min-height: 100px;
   width: 100%;
-  background: linear-gradient(159.17deg, rgba(201, 0, 179, 0.45) 13.78%, rgba(70, 67, 237, 0.45) 53.06%, rgba(52, 0, 175, 0.45) 96.71%);
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 4em;
+  position: relative;
 }
 .section-section .box-container .box h4 {
   font-family: "Open Sans", sans-serif;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.section-section .box-container .box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(159.17deg, rgba(201, 0, 179, 0.45) 13.78%, rgba(70, 67, 237, 0.45) 53.06%, rgba(52, 0, 175, 0.45) 96.71%);
+  border-radius: 20px;
+}
+.section-section .box-container .box:nth-child(2) {
+  background: url("/asstets/img/faith-build.jpg") center/cover, no-repeat;
 }
 @media screen and (min-width: 43em) {
   .section-section .box-container {
@@ -1306,6 +1307,21 @@ a {
   }
   .volunteer-section .vol-text-img-con .img-con {
     height: 300px;
+    background: url("/asstets/img/vol.jpg") center/cover, no-repeat;
+    height: 500px;
+  }
+}
+
+.volunteer-form-con {
+  margin-top: 2em;
+}
+.volunteer-form-con .form-container iframe {
+  width: 100%;
+}
+@media screen and (min-width: 62em) {
+  .volunteer-form-con .form-container iframe {
+    width: 50%;
+    margin-top: -330px;
   }
 }
 

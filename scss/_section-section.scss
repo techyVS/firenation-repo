@@ -25,20 +25,36 @@
 		display: grid;
 		gap: 10px;
 		.box {
-			height: 100px;
+			min-height: 100px;
 			width: 100%;
-			background: $grad-bg;
 			border-radius: $radius;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			padding: 4em;
+			position: relative;
 			h4 {
 				font-family: $body-font;
 				text-align: center;
 				text-transform: uppercase;
 				color: #fff;
+				position: relative;
+				z-index: 1;
 			}
+			&::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: $grad-bg;
+				border-radius: $radius;
+			}
+
+			&:nth-child(2) {
+				background: url('/asstets/img/faith-build.jpg') center/cover, no-repeat;
+				// position: relative;
+				// z-index: -1;
+			}
+
 		}
 
 		@media screen and (min-width: 43em) {
