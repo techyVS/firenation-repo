@@ -200,8 +200,11 @@ a {
   background: #ff9500;
   margin-top: 1em;
 }
-.header .navbar-container .navbar .navlinks-con .li-wrapper .list-items:not(:hover) #dropdown {
-  display: none;
+@media screen and (min-width: 62em) {
+  .header .navbar-container .navbar .navlinks-con .li-wrapper .list-items:hover #dropdown {
+    position: absolute;
+    width: 200%;
+  }
 }
 .header .navbar-container .navbar .navlinks-con .contact-wrapper li {
   list-style: none;
