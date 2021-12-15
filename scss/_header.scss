@@ -56,11 +56,26 @@
 						#dropdown {
 							position: relative;
 							display: none;
-							padding: 1em 1em;
+							padding: 0.3em 0;
+
 							li {
 								list-style: none;
-								margin-bottom: 20px;
 								text-align: start;
+								&:nth-child(2) {
+									margin: 0 0;
+								}
+								a {
+									color: #fff;
+									text-decoration: none;
+									font-family: $body-font;
+									display: block;
+									padding: 0.9em 1em;
+									&:hover {
+										background: #fff;
+										color: $accent-color;
+									}
+								
+								}
 							}
 						}
 
@@ -69,8 +84,8 @@
 							// position: absolute;
 							// width: 100%;
 							margin: 0 auto;
-							min-height: 100px;
-							background: red;
+							background: $accent-color;
+							margin-top: 1em;
 						}
 					}
 				}

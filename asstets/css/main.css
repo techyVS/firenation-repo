@@ -174,18 +174,31 @@ a {
 .header .navbar-container .navbar .navlinks-con .li-wrapper .list-items #dropdown {
   position: relative;
   display: none;
-  padding: 1em 1em;
+  padding: 0.3em 0;
 }
 .header .navbar-container .navbar .navlinks-con .li-wrapper .list-items #dropdown li {
   list-style: none;
-  margin-bottom: 20px;
   text-align: start;
+}
+.header .navbar-container .navbar .navlinks-con .li-wrapper .list-items #dropdown li:nth-child(2) {
+  margin: 0 0;
+}
+.header .navbar-container .navbar .navlinks-con .li-wrapper .list-items #dropdown li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  display: block;
+  padding: 0.9em 1em;
+}
+.header .navbar-container .navbar .navlinks-con .li-wrapper .list-items #dropdown li a:hover {
+  background: #fff;
+  color: #ff9500;
 }
 .header .navbar-container .navbar .navlinks-con .li-wrapper .list-items:hover #dropdown {
   display: block;
   margin: 0 auto;
-  min-height: 100px;
-  background: red;
+  background: #ff9500;
+  margin-top: 1em;
 }
 .header .navbar-container .navbar .navlinks-con .contact-wrapper li {
   list-style: none;
