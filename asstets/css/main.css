@@ -200,6 +200,9 @@ a {
   background: #ff9500;
   margin-top: 1em;
 }
+.header .navbar-container .navbar .navlinks-con .li-wrapper .list-items:not(:hover) #dropdown {
+  display: none;
+}
 .header .navbar-container .navbar .navlinks-con .contact-wrapper li {
   list-style: none;
 }

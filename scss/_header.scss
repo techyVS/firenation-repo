@@ -74,7 +74,6 @@
 										background: #fff;
 										color: $accent-color;
 									}
-								
 								}
 							}
 						}
@@ -86,6 +85,10 @@
 							margin: 0 auto;
 							background: $accent-color;
 							margin-top: 1em;
+						}
+
+						&:not(:hover) #dropdown {
+							display: none;
 						}
 					}
 				}
