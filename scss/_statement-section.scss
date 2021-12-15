@@ -1,0 +1,52 @@
+@use 'global-resets' as *;
+
+.fn-statement-section {
+	// background: red;
+	margin: 1em 0 7em 0;
+	.statement-container {
+		width: 90%;
+		margin: 0 auto;
+		.statement-heading {
+			text-transform: uppercase;
+			font-family: $heading;
+			.heading {
+				font-size: clamp(1.5rem, 5vw, 2rem);
+				line-height: 1.4;
+				color: $gray;
+				&:nth-child(1) {
+					span {
+						#lotfile {
+							width: 40px !important;
+							display: inline-block;
+						}
+					}
+				}
+
+				&:nth-child(2) {
+					margin-left: 2.2em;
+				}
+
+				&:nth-child(3) {
+					margin-left: 1.4em;
+				}
+			}
+		}
+
+		.article {
+			margin-top: 1.5em;
+			max-width: 600px;
+
+			.list-section {
+				display: grid;
+				gap: 30px;
+
+				.article-list {
+					font-family: $body-font;
+					list-style: none;
+					line-height: $line-height;
+					color: $main-color;
+				}
+			}
+		}
+	}
+}

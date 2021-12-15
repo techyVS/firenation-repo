@@ -1026,6 +1026,47 @@ a {
   }
 }
 
+.fn-statement-section {
+  margin: 1em 0 7em 0;
+}
+.fn-statement-section .statement-container {
+  width: 90%;
+  margin: 0 auto;
+}
+.fn-statement-section .statement-container .statement-heading {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+.fn-statement-section .statement-container .statement-heading .heading {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  line-height: 1.4;
+  color: #5a5a5a;
+}
+.fn-statement-section .statement-container .statement-heading .heading:nth-child(1) span #lotfile {
+  width: 40px !important;
+  display: inline-block;
+}
+.fn-statement-section .statement-container .statement-heading .heading:nth-child(2) {
+  margin-left: 2.2em;
+}
+.fn-statement-section .statement-container .statement-heading .heading:nth-child(3) {
+  margin-left: 1.4em;
+}
+.fn-statement-section .statement-container .article {
+  margin-top: 1.5em;
+  max-width: 600px;
+}
+.fn-statement-section .statement-container .article .list-section {
+  display: grid;
+  gap: 30px;
+}
+.fn-statement-section .statement-container .article .list-section .article-list {
+  font-family: "Open Sans", sans-serif;
+  list-style: none;
+  line-height: 27px;
+  color: #18181c;
+}
+
 .main-area {
   padding: 5em 0;
 }
