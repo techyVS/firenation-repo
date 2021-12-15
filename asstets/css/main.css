@@ -183,8 +183,6 @@ a {
 }
 .header .navbar-container .navbar .navlinks-con .li-wrapper .list-items:hover #dropdown {
   display: block;
-  position: absolute;
-  width: 200%;
   margin: 0 auto;
   min-height: 100px;
   background: red;
