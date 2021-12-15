@@ -86,8 +86,8 @@
 				display: inline-block;
 				width: 200px;
 				margin-top: 2em;
-				background: linear-gradient(90deg, #f5a433 33.16%, #d96438 100%);
-				padding: 0.8em 4em;
+				background: $accent-color;
+				padding: 0.6em 4em;
 				border: none;
 				border-radius: $radius;
 				font-size: 1rem;
@@ -95,6 +95,10 @@
 				color: #fff;
 				cursor: pointer;
 				font-family: $body-font;
+
+				&:hover {
+					background: $hover;
+				}
 			}
 		}
 	}

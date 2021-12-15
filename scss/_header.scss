@@ -62,7 +62,7 @@
 							font-family: $heading;
 							display: inline-block;
 							background: $accent-color;
-							padding: 0.5em 3em;
+							padding: 0.8em 3em;
 							border-radius: $radius;
 							color: #ffffff;
 							font-weight: 700;
@@ -208,7 +208,11 @@
 					.contact-wrapper {
 						margin-top: -10px;
 						.contact-btn {
-							padding: 0.6em 3em;
+							padding: 0.8em 3em;
+							border-radius: 40px;
+							&:hover {
+								background: $hover;
+							}
 						}
 					}
 				}

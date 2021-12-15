@@ -13,6 +13,7 @@
 			height: 300px;
 			position: relative;
 			border-radius: $radius;
+			box-shadow: $shadow;
 			&::before {
 				content: '';
 				position: absolute;

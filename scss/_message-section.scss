@@ -1,0 +1,88 @@
+@use 'global-resets' as *;
+
+.mess-social-section {
+	margin-bottom: 100px;
+	.parent {
+		width: 90%;
+		margin: 0 auto;
+		display: grid;
+		gap: 30px;
+		.message {
+			height: 300px;
+			background: indigo;
+      border-radius: $radius;
+      box-shadow: $shadow;
+      .msg-link {
+        height: 100%;
+        background: $grad-bg;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $radius;
+        text-decoration: none;
+        .container {
+          h3 {
+            color: #fff;
+            font-family: $heading;
+          }
+        }
+      }
+		}
+
+		.social-media-card {
+			background: #fff;
+			min-height: 200px;
+			border-radius: $radius;
+			box-shadow: $shadow;
+			padding: 2em 1.5em;
+
+			.card-title {
+				font-family: $heading;
+				border-bottom: solid $accent-color 2px;
+				margin-bottom: 2em;
+				padding-bottom: 1em;
+				.heading {
+					text-transform: uppercase;
+					color: $gray;
+				}
+			}
+
+			.social-media-icons {
+				display: grid;
+				gap: 20px;
+				.icon-wrapper {
+					font-family: $body-font;
+
+					a {
+						color: $main-color;
+						font-size: 1.3rem;
+						display: flex;
+						align-items: center;
+						text-decoration: none;
+						i {
+							width: 20%;
+						}
+						h4 {
+							text-transform: capitalize;
+							font-size: 1.25rem;
+						}
+					}
+				}
+			}
+		}
+
+    @media screen and (min-width: 43em) {
+      display: flex;
+      width: 90%;
+      .message {
+        width: 40%;
+      }
+    }
+
+    @media screen and (min-width: 62em) {
+      width: 95%;
+      // gap: 50px;
+    }
+	}
+}

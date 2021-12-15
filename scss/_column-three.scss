@@ -13,6 +13,7 @@
 			height: 400px;
 			border-radius: $radius;
 			position: relative;
+			box-shadow: $shadow;
 			&::before {
 				content: '';
 				position: absolute;
@@ -57,6 +58,7 @@
 			height: 300px;
 			border-radius: $radius;
 			position: relative;
+			box-shadow: $shadow;
 			&::before {
 				content: '';
 				position: absolute;
@@ -68,7 +70,7 @@
 				border-radius: $radius;
 				position: absolute;
 				z-index: 1;
-				left: 10%;
+				left: 5%;
 				bottom: 10%;
 
 				h3 {
@@ -100,7 +102,9 @@
 			background: url('/asstets/img/donate.jpg') center/cover no-repeat;
 		}
 
-		// Media queries section================
+		// Media queries section==========================
+		//================================================
+		//================================================
 
 		// Tablet==========
 		@media screen and (min-width: 43em) {
