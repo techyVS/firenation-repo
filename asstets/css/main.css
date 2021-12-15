@@ -159,6 +159,7 @@ a {
 .header .navbar-container .navbar .navlinks-con .li-wrapper .list-items {
   list-style: none;
   margin-bottom: 2em;
+  position: relative;
 }
 .header .navbar-container .navbar .navlinks-con .li-wrapper .list-items .btn {
   text-decoration: none;
@@ -169,6 +170,24 @@ a {
 .header .navbar-container .navbar .navlinks-con .li-wrapper .list-items .btn:focus {
   outline: none !important;
   box-shadow: none !important;
+}
+.header .navbar-container .navbar .navlinks-con .li-wrapper .list-items #dropdown {
+  position: relative;
+  display: none;
+  padding: 1em 1em;
+}
+.header .navbar-container .navbar .navlinks-con .li-wrapper .list-items #dropdown li {
+  list-style: none;
+  margin-bottom: 20px;
+  text-align: start;
+}
+.header .navbar-container .navbar .navlinks-con .li-wrapper .list-items:hover #dropdown {
+  display: block;
+  position: absolute;
+  width: 200%;
+  margin: 0 auto;
+  min-height: 100px;
+  background: red;
 }
 .header .navbar-container .navbar .navlinks-con .contact-wrapper li {
   list-style: none;
@@ -293,10 +312,11 @@ a {
   #header .navbar-container .navbar .navlinks-con .li-wrapper .list-items {
     margin-right: 30px;
   }
-  #header .navbar-container .navbar .navlinks-con .li-wrapper .list-items .btn {
+  #header .navbar-container .navbar .navlinks-con .li-wrapper .list-items #btn {
     font-size: unset;
     color: #000;
     opacity: 1;
+    position: relative;
   }
   #header .navbar-container .navbar .navlinks-con .li-wrapper .list-items .btn-accent {
     color: #ff9500;

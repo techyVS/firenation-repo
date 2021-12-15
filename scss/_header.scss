@@ -40,6 +40,7 @@
 					.list-items {
 						list-style: none;
 						margin-bottom: 2em;
+						position: relative;
 						.btn {
 							text-decoration: none;
 							font-family: $body-font;
@@ -50,6 +51,26 @@
 								outline: none !important;
 								box-shadow: none !important;
 							}
+						}
+
+						#dropdown {
+							position: relative;
+							display: none;
+							padding: 1em 1em;
+							li {
+								list-style: none;
+								margin-bottom: 20px;
+								text-align: start;
+							}
+						}
+
+						&:hover #dropdown {
+							display: block;
+							position: absolute;
+							width: 200%;
+							margin: 0 auto;
+							min-height: 100px;
+							background: red;
 						}
 					}
 				}
@@ -194,10 +215,11 @@
 						.list-items {
 							margin-right: 30px;
 							// margin-top: 35px;
-							.btn {
+							#btn {
 								font-size: unset;
 								color: #000;
 								opacity: 1;
+								position: relative;
 							}
 							.btn-accent {
 								color: $accent-color;
