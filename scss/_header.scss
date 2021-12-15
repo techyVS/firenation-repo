@@ -70,6 +70,7 @@
 									font-family: $body-font;
 									display: block;
 									padding: 0.9em 1em;
+									white-space: nowrap;
 									&:hover {
 										background: #fff;
 										color: $accent-color;
@@ -84,10 +85,11 @@
 							// width: 100%;
 							margin: 0 auto;
 							background: $accent-color;
-							margin-top: 1em;
+							margin-top: 2em;
 							@media screen and (min-width: 62em) {
 								position: absolute;
-								width: 200%;
+								min-width: 200%;
+								margin-top: 0;
 							}
 						}
 					}
@@ -126,7 +128,7 @@
 									content: '';
 									position: absolute;
 									top: 105%;
-									left: -1px;
+									left: 0;
 									height: 3px;
 									width: 100%;
 									background: $accent-color;
