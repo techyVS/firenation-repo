@@ -100,6 +100,10 @@ a {
   position: relative;
   display: inline-block;
   margin-top: 3em;
+  text-decoration: none;
+  padding: 0.8em 3em;
+  color: #fff;
+  border-radius: 20px;
 }
 #slider-wrapper #slider-item::before {
   content: "";
@@ -146,7 +150,6 @@ a {
   opacity: 0;
   transition: opacity 400ms ease-in-out;
   padding: 4em 0 2em 0;
-  min-height: 90vh;
   width: 100%;
   z-index: 5;
   transform: translate(-100%);
@@ -1520,6 +1523,7 @@ a {
 .what-we-do-section .wwd-container {
   width: 90%;
   margin: 0 auto;
+  padding-top: 3em;
 }
 .what-we-do-section .wwd-container .text-container .heading {
   font-family: "Montserrat", sans-serif;

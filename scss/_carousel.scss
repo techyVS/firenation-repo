@@ -28,6 +28,10 @@
 				// z-index: 10000 !important;
 				display: inline-block;
 				margin-top: 3em;
+				text-decoration: none;
+				padding: .8em 3em;
+				color: #fff;
+				border-radius: $radius;
 			}
 		}
 		&::before {

@@ -6,7 +6,7 @@
 	display: grid;
 	gap: 40px;
 	&::before {
-		content: "";
+		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -17,6 +17,7 @@
 	.wwd-container {
 		width: 90%;
 		margin: 0 auto;
+		padding-top: 3em;
 
 		.text-container {
 			.heading {
@@ -30,7 +31,6 @@
 			margin-top: 2em;
 
 			.wrapper {
-
 				.text {
 					line-height: 1.5;
 					margin-bottom: 1rem;
