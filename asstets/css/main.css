@@ -146,7 +146,7 @@ a {
   opacity: 0;
   transition: opacity 400ms ease-in-out;
   padding: 4em 0 2em 0;
-  height: 90vh;
+  min-height: 90vh;
   width: 100%;
   z-index: 5;
   transform: translate(-100%);
@@ -1499,6 +1499,55 @@ a {
   .volunteer-form-con .form-container iframe {
     width: 50%;
     margin-top: -330px;
+  }
+}
+
+.what-we-do-section {
+  padding: 3em 0;
+  position: relative;
+  display: grid;
+  gap: 40px;
+}
+.what-we-do-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #ff9500;
+}
+.what-we-do-section .wwd-container {
+  width: 90%;
+  margin: 0 auto;
+}
+.what-we-do-section .wwd-container .text-container .heading {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+.what-we-do-section .wwd-container .paragraph-text {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 2em;
+}
+.what-we-do-section .wwd-container .paragraph-text .wrapper .text {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.what-we-do-section .wwd-container .paragraph-text .wrapper .ul {
+  list-style: none;
+}
+.what-we-do-section .wwd-container .paragraph-text .wrapper .ul li {
+  margin-bottom: 1em;
+  display: flex;
+  gap: 10px;
+}
+.what-we-do-section .wwd-container .paragraph-text .wrapper .ul li ion-icon {
+  font-size: 1.5em;
+}
+@media screen and (min-width: 43em) {
+  .what-we-do-section .wwd-container {
+    width: 60%;
+    max-width: 600px;
   }
 }
 
