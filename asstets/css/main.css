@@ -191,7 +191,7 @@ a {
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
   display: block;
-  padding: 0.9em 1em;
+  padding: 0.9em 0.5em;
   white-space: nowrap;
 }
 .header .navbar-container .navbar .navlinks-con .li-wrapper .list-items #dropdown li a:hover {
