@@ -637,27 +637,48 @@ a {
   margin: 0 auto;
   position: relative;
   cursor: pointer;
-}
-.livestream-section .lv-st-container::before {
-  content: "This event has not started or has ended...";
-  font-weight: bold;
-  text-align: center;
-  border-radius: 10px;
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  padding: 0 10px;
-  color: #fff;
-  background: #000;
-  z-index: 100;
-  transform: translate(-50%);
-  font-family: "Open Sans", sans-serif;
-  opacity: 0.3;
+  /*  Start of Livestream frame Image==============================================================================================================*/
 }
 .livestream-section .lv-st-container .livestream-frame {
   width: 100%;
   border-radius: 20px;
   position: relative;
+}
+.livestream-section .lv-st-container .live-video-container {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 62em) {
+  .livestream-section .lv-st-container .live-video-container {
+    margin-bottom: unset;
+  }
+}
+.livestream-section .lv-st-container .live-video-container iframe {
+  width: 100% !important;
+  margin: auto !important;
+  min-height: 200px;
+  background: red;
+  border-radius: 20px;
+}
+@media screen and (min-width: 500px) {
+  .livestream-section .lv-st-container .live-video-container iframe {
+    min-height: 300px;
+  }
+}
+@media screen and (min-width: 43em) {
+  .livestream-section .lv-st-container .live-video-container iframe {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 62em) {
+  .livestream-section .lv-st-container .live-video-container iframe {
+    height: 600px;
+  }
+}
+@media screen and (min-width: 1358px) {
+  .livestream-section .lv-st-container .live-video-container iframe {
+    height: 700px;
+  }
 }
 @media screen and (min-width: 62em) {
   .livestream-section .lv-st-container {
