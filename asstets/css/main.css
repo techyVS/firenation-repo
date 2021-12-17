@@ -1393,7 +1393,7 @@ a {
   gap: 10px;
 }
 .section-section .box-container .box {
-  min-height: 100px;
+  min-height: 200px;
   width: 100%;
   border-radius: 20px;
   display: flex;
@@ -1417,8 +1417,17 @@ a {
   background: linear-gradient(159.17deg, rgba(201, 0, 179, 0.45) 13.78%, rgba(70, 67, 237, 0.45) 53.06%, rgba(52, 0, 175, 0.45) 96.71%);
   border-radius: 20px;
 }
+.section-section .box-container .box:nth-child(1) {
+  background: url("/asstets/img/follow-jesus.jpeg") center/cover, no-repeat;
+}
 .section-section .box-container .box:nth-child(2) {
   background: url("/asstets/img/faith-build.jpg") center/cover, no-repeat;
+}
+.section-section .box-container .box:nth-child(3) {
+  background: url("/asstets/img/equip.jpg") center/cover, no-repeat;
+}
+.section-section .box-container .box:nth-child(4) {
+  background: url("/asstets/img/bible-img.jpeg") center/cover, no-repeat;
 }
 @media screen and (min-width: 43em) {
   .section-section .box-container {
