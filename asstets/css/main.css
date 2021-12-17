@@ -657,8 +657,6 @@ a {
   width: 100% !important;
   margin: auto !important;
   min-height: 200px;
-  background: red;
-  border-radius: 20px;
 }
 @media screen and (min-width: 500px) {
   .livestream-section .lv-st-container .live-video-container iframe {
