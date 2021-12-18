@@ -1,7 +1,7 @@
 {
   "name": "firenation_project",
   "version": "1.0.0",
-  "description": "Official website for Fire Nation Evangelistic Ministry",
+  "description": "Official website for firenation Evangelistic Ministry",
   "main": "index.js",
   "scripts": {
     "compile:sass": "sass --watch scss:asstets/css"

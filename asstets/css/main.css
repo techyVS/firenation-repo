@@ -647,6 +647,24 @@ a {
 .livestream-section .lv-st-container .live-video-container {
   display: flex;
   justify-content: center;
+  margin-bottom: -25em;
+  position: relative;
+  height: 700px;
+}
+@media screen and (min-width: 500px) {
+  .livestream-section .lv-st-container .live-video-container {
+    margin-bottom: -17em;
+  }
+}
+@media screen and (min-width: 43em) {
+  .livestream-section .lv-st-container .live-video-container {
+    margin-bottom: -10em;
+  }
+}
+@media screen and (min-width: 54em) {
+  .livestream-section .lv-st-container .live-video-container {
+    margin-bottom: -7em;
+  }
 }
 @media screen and (min-width: 62em) {
   .livestream-section .lv-st-container .live-video-container {
@@ -656,22 +674,12 @@ a {
 .livestream-section .lv-st-container .live-video-container iframe {
   width: 100% !important;
   margin: auto !important;
-  min-height: 200px;
-}
-@media screen and (min-width: 500px) {
-  .livestream-section .lv-st-container .live-video-container iframe {
-    min-height: 300px;
-  }
-}
-@media screen and (min-width: 43em) {
-  .livestream-section .lv-st-container .live-video-container iframe {
-    height: 400px;
-  }
-}
-@media screen and (min-width: 62em) {
-  .livestream-section .lv-st-container .live-video-container iframe {
-    height: 600px;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100% !important;
 }
 @media screen and (min-width: 1358px) {
   .livestream-section .lv-st-container .live-video-container iframe {
@@ -685,7 +693,7 @@ a {
 }
 
 .mess-social-section {
-  margin-bottom: 100px;
+  margin-bottom: 15em;
 }
 .mess-social-section .parent {
   width: 90%;
@@ -753,16 +761,18 @@ a {
 }
 @media screen and (min-width: 43em) {
   .mess-social-section .parent {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     width: 90%;
-  }
-  .mess-social-section .parent .message {
-    width: 40%;
   }
 }
 @media screen and (min-width: 62em) {
   .mess-social-section .parent {
+    display: flex;
     width: 95%;
+  }
+  .mess-social-section .parent .message {
+    width: 45%;
   }
 }
 
@@ -1570,7 +1580,7 @@ a {
 }
 .what-we-do-section .wwd-container .paragraph-text .wrapper .ul li {
   margin-bottom: 1em;
-  display: flex;
+  display: grid;
   gap: 10px;
 }
 .what-we-do-section .wwd-container .paragraph-text .wrapper .ul li ion-icon {
