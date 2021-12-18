@@ -419,6 +419,7 @@ a {
   color: #fff;
   text-decoration: none;
   position: relative;
+  font-size: 0.9rem;
 }
 @media screen and (min-width: 43em) {
   .intro .container {
