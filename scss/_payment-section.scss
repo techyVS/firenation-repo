@@ -1,0 +1,57 @@
+@use 'global-resets' as *;
+
+.payment-details-container {
+  margin-top: 2em;
+  
+  .box {
+    width: 90%;
+    margin: 0 auto;
+    background: $grad-bg;
+    font-family: $body-font;
+    padding: 2em 1em;
+    text-transform: uppercase;
+    border-radius: $radius;
+    h4 {
+      line-height: 1.6;
+      color: #fff;
+
+      strong {
+        color: $main-color;
+      }
+    }
+    
+    a {
+      display: inline-block;
+      margin-top: 2em;
+      text-decoration: none;
+      background: $accent-color;
+      color: #fff;
+      padding: .6em 3em;
+      border-radius: $radius;
+      font-weight: bold;
+    }
+
+    .thank-you-wrapper {
+      margin-top: 1.5em;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    @media screen and (min-width: 43em) {
+      width: 70%;
+    }
+
+    @media screen and (min-width: 62em) {
+      width: 95%;
+      max-width: 600px;
+      margin: unset;
+      margin-left: 30px;
+    
+
+      a {
+        // margin-top: 2em;
+        display: inline-block;
+      }
+    }
+  }
+}
