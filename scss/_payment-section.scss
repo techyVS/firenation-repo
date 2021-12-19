@@ -6,17 +6,28 @@
   .box {
     width: 90%;
     margin: 0 auto;
-    background: $grad-bg;
+    background: url(/asstets/img/bg.jpeg) center/cover, no-repeat;
     font-family: $body-font;
     padding: 2em 1em;
     text-transform: uppercase;
     border-radius: $radius;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: $grad-bg;
+      border-radius: $radius;
+      z-index: 0;
+    }
     h4 {
       line-height: 1.6;
       color: #fff;
+      position: relative;
+      z-index: 1;
 
       strong {
-        color: $main-color;
+        color: $accent-color;
       }
     }
     
@@ -29,12 +40,16 @@
       padding: .6em 3em;
       border-radius: $radius;
       font-weight: bold;
+      position: relative;
+      z-index: 1;
     }
 
     .thank-you-wrapper {
       margin-top: 1.5em;
       color: #fff;
       font-weight: bold;
+      position: relative;
+      z-index: 1;
     }
 
     @media screen and (min-width: 43em) {
