@@ -1,2 +1,46 @@
 @use 'global-resets' as *;
 
+.section {
+	height: 70vh;
+	display: flex;
+	align-items: center;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		width: 100%;
+		background: $accent-color;
+		height: 2px;
+	}
+	.wrapperbox {
+		height: 300px;
+		background: url('/asstets/img/bg.jpeg') center/cover, no-repeat;
+		width: 90%;
+		margin: 0 auto;
+		border-radius: $radius;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: $grad-bg;
+			border-radius: $radius;
+		}
+
+		&::after {
+			content: 'Coming soon... December 2022';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			line-height: 1.5;
+			color: #fff;
+			font-family: $body-font;
+			font-weight: bold;
+			font-size: clamp(1.5em, 4vw, $heading-size);
+		}
+	}
+}

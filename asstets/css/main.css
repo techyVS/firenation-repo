@@ -1621,6 +1621,7 @@ a {
   border-radius: 20px;
   height: 200px;
   object-fit: cover;
+  object-position: center;
 }
 .what-we-do-section .wwd-container .paragraph-text {
   font-family: "Open Sans", sans-serif;
@@ -1650,6 +1651,57 @@ a {
     width: 60%;
     max-width: 600px;
   }
+}
+.what-we-do-section .wwd-container .form-container {
+  width: 100%;
+  margin-top: 3em;
+}
+.what-we-do-section .wwd-container .form-container iframe {
+  width: 100%;
+  height: 1200px;
+}
+
+.section {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #ff9500;
+  height: 2px;
+}
+.section .wrapperbox {
+  height: 300px;
+  background: url("/asstets/img/bg.jpeg") center/cover, no-repeat;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 20px;
+  position: relative;
+}
+.section .wrapperbox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(159.17deg, rgba(201, 0, 179, 0.45) 13.78%, rgba(70, 67, 237, 0.45) 53.06%, rgba(52, 0, 175, 0.45) 96.71%);
+  border-radius: 20px;
+}
+.section .wrapperbox::after {
+  content: "Coming soon... December 2022";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 1.5;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: clamp(1.5em, 4vw, 2.5rem);
 }
 
 /*# sourceMappingURL=main.css.map */
