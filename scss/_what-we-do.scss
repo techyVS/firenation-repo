@@ -26,6 +26,19 @@
 			}
 		}
 
+		.image-container {
+			padding-top: 2em;
+			width: 100%;
+			margin: 0 auto;
+
+			img {
+				width: 100%;
+				border-radius: $radius;
+				height: 200px;
+				object-fit: cover;
+			}
+		}
+
 		.paragraph-text {
 			font-family: $body-font;
 			margin-top: 2em;
@@ -34,6 +47,10 @@
 				.text {
 					line-height: 1.5;
 					margin-bottom: 1rem;
+				}
+				a {
+					text-decoration: none;
+					color: $accent-color;
 				}
 
 				.ul {
