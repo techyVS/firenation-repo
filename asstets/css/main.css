@@ -1661,13 +1661,13 @@ a {
   height: 1200px;
 }
 
-.section {
-  height: 70vh;
+.section-container {
+  min-height: 70vh;
   display: flex;
   align-items: center;
   position: relative;
 }
-.section::before {
+.section-container::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1675,7 +1675,7 @@ a {
   background: #ff9500;
   height: 2px;
 }
-.section .wrapperbox {
+.section-container .wrapperbox {
   height: 300px;
   background: url("/asstets/img/bg.jpeg") center/cover, no-repeat;
   width: 90%;
@@ -1683,14 +1683,14 @@ a {
   border-radius: 20px;
   position: relative;
 }
-.section .wrapperbox::before {
+.section-container .wrapperbox::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(159.17deg, rgba(201, 0, 179, 0.45) 13.78%, rgba(70, 67, 237, 0.45) 53.06%, rgba(52, 0, 175, 0.45) 96.71%);
   border-radius: 20px;
 }
-.section .wrapperbox::after {
+.section-container .wrapperbox::after {
   content: "Coming soon... December 2022";
   position: absolute;
   top: 50%;
